@@ -3,14 +3,41 @@ import { useState } from 'react'
 const Header = ({text }) => <h2>{text}</h2>
 const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>
 const Static = ({text }) => <h2>{text}</h2>
+
+const StatisticLine = ({text, value}) => (
+  <table>
+    <tbody>
+      <tr>
+        <td>{text}</td>
+        <td>{value}</td>
+      </tr>
+    </tbody>
+  </table>
+)
+
 const History = (props) => {
-  return(
+
+  let total = props.goodHis + props.neutralHis + props.badHis
+  let average = (props.goodHis + props.neutralHis + props.badHis)/3
+  let positive = ((props.goodHis)/(props.goodHis + props.neutralHis + props.badHis))*100
+  
+  if(total > 0 ){
+    return(
     <div>
-      <p>good {props.goodHis}</p>
-      <p>neutral {props.neutralHis}</p>
-      <p>bad {props.badHis}</p>
+      <StatisticLine text= "good" value = {props.goodHis}/>
+      <StatisticLine text= "neutral" value = {props.neutralHis}/>
+      <StatisticLine text= "bad" value = {props.badHis}/>
+      <StatisticLine text= "average" value = {average}/>
+      <StatisticLine text= "positive" value = {positive + '%'}/>
     </div>
   )
+  }else {
+    return(
+    <div>
+      <h4>no feedback given</h4>
+    </div>
+  )
+  }
 }
 
 const App = () => {
@@ -25,12 +52,12 @@ const App = () => {
   }
 
   const handleNeutralClick = () => {
-    setNeutral(neutral + 1)
+    setNeutral(0)
     console.log("neutral", neutral)
   }
 
   const handleBadClick = () => {
-    setBad(bad + 1)
+    setBad(bad-1)
     console.log("bad", bad)
   }
 
