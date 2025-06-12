@@ -4,6 +4,20 @@
 # Allow gitignore itself
 !.gitignore
 
+# Allow newnotediagram folder
+!part0/
+!part0/newnotediagram/
+!part0/newnotediagram/AddNewNoteDiagram.md
+
+# Allow newnoteinsingleappdiagram folder
+!part0/newnoteinsingleappdiagram/
+!part0/newnoteinsingleappdiagram/AddNewNoteDiagram.md
+
+# Allow singlepageappdiagram folder
+!part0/singlepageappdiagram/
+!part0/newnotediagram/AddNewNoteDiagram.md
+
+
 # Allow anecdotes folder
 !part1/
 !part1/anecdotes/
