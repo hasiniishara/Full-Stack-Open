@@ -1,0 +1,29 @@
+# Ignore everything
+*
+
+# Allow gitignore itself
+!.gitignore
+
+# Allow anecdotes folder
+!part1/
+!part1/anecdotes/
+!part1/anecdotes/package.json
+!part1/anecdotes/src/
+!part1/anecdotes/src/App.jsx
+!part1/anecdotes/src/main.jsx
+
+# Allow courseinfo folder
+!part1/
+!part1/courseinfo/
+!part1/courseinfo/package.json
+!part1/courseinfo/src/
+!part1/courseinfo/src/App.jsx
+!part1/courseinfo/src/main.jsx
+
+# Allow unicafe folder
+!part1/
+!part1/unicafe/
+!part1/unicafe/package.json
+!part1/unicafe/src/
+!part1/unicafe/src/App.jsx
+!part1/unicafe/src/main.jsx
