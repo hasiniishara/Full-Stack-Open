@@ -15,7 +15,7 @@
 
 # Allow singlepageappdiagram folder
 !part0/singlepageappdiagram/
-!part0/newnotediagram/AddNewNoteDiagram.md
+!part0/singlepageappdiagram/AddNewNoteDiagram.md
 
 
 # Allow anecdotes folder
