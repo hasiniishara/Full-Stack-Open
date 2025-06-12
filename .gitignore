@@ -13,7 +13,6 @@
 !part1/anecdotes/src/main.jsx
 
 # Allow courseinfo folder
-!part1/
 !part1/courseinfo/
 !part1/courseinfo/package.json
 !part1/courseinfo/src/
@@ -21,7 +20,6 @@
 !part1/courseinfo/src/main.jsx
 
 # Allow unicafe folder
-!part1/
 !part1/unicafe/
 !part1/unicafe/package.json
 !part1/unicafe/src/
