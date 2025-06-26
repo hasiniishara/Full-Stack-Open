@@ -10,11 +10,13 @@ export const PersonForm = ({ addPerson, newName, newNumber, handleNameChange, ha
     </form>
 )
 
-export const Persons = ({ personsToShow }) => {
+export const Persons = ({ personsToShow, deletePerson }) => {
     return(
         <ul>
             {personsToShow.map((person) => (
-            <li key={person.id}> {person.name} {person.number}</li>
+                <li key={person.id}> {person.name} {person.number}
+                    <button onClick={() => deletePerson(person.id, person.name)} >delete</button>
+                </li>
             ))}
         </ul>
     )
