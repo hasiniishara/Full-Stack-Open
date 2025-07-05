@@ -96,6 +96,20 @@ app.delete('/api/persons/:id', (request, response)  =>{
     response.status(204).end()
 })
 
+app.put('/api/persons/:id', (request, response) => {
+  const id = request.params.id
+  const body = request.body
+
+  const index = persons.findIndex(p => p.id === id)
+  if (index === -1) {
+    return response.status(404).json({ error: 'Person not found' })
+  }
+
+  const updatedPerson = { ...persons[index], number: body.number }
+  persons[index] = updatedPerson
+  response.json(updatedPerson)
+})
+
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
