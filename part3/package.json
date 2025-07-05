@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
   "start": "node index.js",
-  "build:ui": "rm -rf build && cd ../part2/phonebook && npm install && npm run build && cp -r dist ../../part3/build"
+  "build:ui": "rm -rf build && cd ../part2/phonebook && npm install && npm run build && cp -r dist ../../part3/dist"
 },
   "keywords": [],
   "author": "",
