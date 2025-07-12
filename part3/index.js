@@ -39,9 +39,7 @@ app.post('/api/persons', (request, response)  =>{
 
 app.get('/api/persons', (request, response)  =>{
     Person.find({}).then(result => {
-      result.forEach(person => {
-        console.log(person)
-      })
+      response.json(result)
     })
 })
 
