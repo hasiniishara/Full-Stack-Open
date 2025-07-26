@@ -149,6 +149,20 @@ test('updating the likes of a blog succeeds', async () => {
   assert.strictEqual(updatedBlog.likes, newLikes)
 })
 
+test('adding a blog fails with status code 401 if token is not provided', async () => {
+  const newBlog = {
+    title: 'Unauthorized blog',
+    author: 'Unknown',
+    url: 'http://unauthorized.com',
+    likes: 0
+  }
+
+  await api
+    .post('/api/blogs')
+    .send(newBlog)
+    .expect(401)
+    .expect('Content-Type', /application\/json/)
+})
 
 
 after(async () => {
