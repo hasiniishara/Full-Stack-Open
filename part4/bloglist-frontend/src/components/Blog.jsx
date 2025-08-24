@@ -31,8 +31,8 @@ const deleteBlogs = () => {
 }
 
   return (
-    <div style={blogStyle}>
-      <p>
+    <div style={blogStyle} >
+      <p className='title'>
         {blog.title}{' '}
         <button onClick={toggleDetails}>
           {detailsVisible ? 'Hide' : 'View'}
@@ -40,9 +40,9 @@ const deleteBlogs = () => {
       </p>
 
       {detailsVisible && (
-        <div>
+        <div >
           <p>{blog.url}</p>
-          <p>{blog.author}</p>
+          <p className='author'>{blog.author}</p>
           <p>likes {blog.likes}
             <button onClick={updateLikes}>like</button>
           </p>
