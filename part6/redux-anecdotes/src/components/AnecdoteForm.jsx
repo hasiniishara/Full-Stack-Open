@@ -9,8 +9,8 @@ const AnecdoteForm = () => {
     e.preventDefault()
     const content = e.target.anecdote.value.trim()
     if (!content) return
-    dispatch(createAnecdote(content))
-    dispatch(setNotification(`created: "${content}"`, 5))
+    dispatch(createAnecdote(content))                      
+    dispatch(setNotification(`new anecdote '${content}'`, 5))
     e.target.reset()
   }
 
@@ -21,5 +21,4 @@ const AnecdoteForm = () => {
     </form>
   )
 }
-
 export default AnecdoteForm
