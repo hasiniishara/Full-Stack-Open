@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { setFilter } from '../reducers/filterReducer'
+import { setFilter } from '../reducers/filterSlice'
 
 const Filter = () => {
   const dispatch = useDispatch()
@@ -8,10 +8,8 @@ const Filter = () => {
     dispatch(setFilter(event.target.value))
   }
 
-  const style = { marginBottom: 10 }
-
   return (
-    <div style={style}>
+    <div style={{ marginBottom: 10 }}>
       filter <input onChange={handleChange}/>
     </div>
   )
